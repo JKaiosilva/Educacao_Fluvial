@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Medição Rio Paraguai</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+	        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+			<script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+			<script src="https://preview.babylonjs.com/ammo.js"></script>
+			<script src="https://preview.babylonjs.com/cannon.js"></script>
+			<script src="https://preview.babylonjs.com/Oimo.js"></script>
+			<script src="https://preview.babylonjs.com/earcut.min.js"></script>
+			<script src="https://preview.babylonjs.com/babylon.js"></script>
+			<script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+			<script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+			<script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+			<script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+			<script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+			<script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+			<script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+
+</head>
+<body>	
+	<marquee class="rolagem_texto"> Faça sua parte, respeite as normas do trafego aquaviário e proteja a vida nos os rios e lagos do Pantanal - Lembre-se, mais importante que chegar cedo, é chegar bem!</marquee>
+	<header>
+		<div class="caixa_logo_titulo">
+			<img class="logo" src="imagens/logotipo.png">
+			<h1 class="titulo">Medição Rio Paraguai</h1>
+		</div>
+	</header>
+	<nav class="navbar navbar-dark bg-primary">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">MRP</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Principal</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Medidas anteriores</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Agências Fluviais</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Contato</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+
+	
+
+	<div class="informacoes">
+		
+		<table id="tabela_primaria" class="table table-responsive-md">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Nivel</th>
+					<th>Ultima Atualização</th>
+					<th>Fonte</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td id="nome_cuiaba">Carregando</td>
+					<td id="nivel_cuiaba">Carregando</td>
+					<td id="att_cuiaba">Carregando</td>
+					<td id="fonte_cuiaba">Carregando</td>
+				</tr>
+				<tr>
+					<td id="nome_caceres">Carregando</td>
+					<td id="nivel_caceres">Carregando</td>
+					<td id="att_caceres">Carregando</td>
+					<td id="fonte_caceres">Carregando</td>
+				</tr>
+				<tr>
+					<td id="nome_ladario">Carregando</td>
+					<td id="nivel_ladario">Carregando</td>
+					<td id="att_ladario">Carregando</td>
+					<td id="fonte_ladario">Carregando</td>
+				</tr>
+				<tr>
+					<td id="nome_fcoimbra">Carregando</td>
+					<td id="nivel_fcoimbra">Carregando</td>
+					<td id="att_fcoimbra">Carregando</td>
+					<td id="fonte_fcoimbra">Carregando</td>
+				</tr>
+				<tr>
+					<td id="nome_pmurtinho">Carregando</td>
+					<td id="nivel_pmurtinho">Carregando</td>
+					<td id="att_pmurtinho">Carregando</td>
+					<td id="fonte_pmurtinho">Carregando</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+	</div>
+
+
+
+	
+		<div class="base">
+			<canvas id="renderCanvas" touch-action="none"></canvas>
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<hr>
+		<h1 class="titulo_fontes">Fontes</h1>
+
+	<div class="cards_linha">
+		<div class="card">
+			<img class="imagem_card" src="https://www.fnucut.org.br/wp-content/uploads/2019/01/ana.png" class="card-img-top">
+			<div class="card-body1">
+				<h5 class="card-title">Agência Nacional de Águas</h5>
+				<p class="card-text">Info sobre a agencia</p>
+			</div>
+			<div>
+				<hr>
+				<a href="https://www.gov.br/ana/pt-br" target="_blank" class="btn btn-primary">Mais sobre</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<img class="imagem_card" src="data:image/jpeg;base64,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" class="card-img-top">
+			<div class="card-body1">
+				<h5 class="card-title">Agência Fluvial de Cáceres</h5>
+				<p class="card-text">Info sobre a agencia</p>
+			</div>
+			<div>
+				<hr>
+				<a href="https://www.marinha.mil.br/om/agencia-fluvial-de-caceres" target="_blank" class="btn btn-primary">Mais sobre</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<img class="imagem_card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqb23hDudKgrzDh--J45F14rcGd15N5yjcOR8F4TVqtw&s" class="card-img-top">
+			<div class="card-body1">
+				<h5 class="card-title">Centro de Hidrografia e Navegação dos Oeste</h5>
+				<p class="card-text">Info sobre a agencia</p>
+			</div>
+			<div>
+				<hr>
+				<a href="https://www.marinha.mil.br/chn-6/" target="_blank" class="btn btn-primary">Mais sobre</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<img class="imagem_card" src="https://cdn6.campograndenews.com.br/uploads/noticias/2020/03/10/i5x6bbl9fzja.jpg" class="card-img-top">
+			<div class="card-body1">
+				<h5 class="card-title">Pelotão Especial de Forte Coimbra</h5>
+				<p class="card-text">Info sobre a agencia</p>
+			</div>
+			<div>
+				<a href="http://www.eb.mil.br/o-exercito?p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=%2Fasset_publisher%2Fview_content&_101_assetEntryId=2573869&_101_type=content&_101_groupId=11425&_101_urlTitle=3-companhia-de-fronteira-e-forte-coimbra-visita&inheritRedirect=true#.YzskRnbMIdU" target="_blank" class="btn btn-primary">Mais sobre</a>
+			</div>
+		</div>
+
+
+		<div class="card">
+			<img class="imagem_card" src="https://www.marinha.mil.br/cfpn/sites/www.marinha.mil.br.cfpn/files/AgMurt.jpg" class="card-img-top">
+			<div class="card-body1">
+				<h5 class="card-title">Agência Fluvial de Porto Murtinho</h5>
+				<p class="card-text">Info sobre a agencia</p>
+			</div>
+			<div>
+				<a href="https://www.marinha.mil.br/om/agencia-fluvial-de-porto-murtin" target="_blank" class="btn btn-primary">Mais sobre</a>
+			</div>
+		</div>
+	</div>
+	<script src="rio_paraguai_3d.js"></script>
+	<script src="amostragem.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+html, body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    color:white;
+    background-image: linear-gradient(to bottom, #2160bd, #3a72bc);
+   
+    
+    
+}
+
+.navbar{
+    color: #ffffff;
+    background-image: linear-gradient(to bottom, #0e4097, #1b53b4);
+
+}
+
+
+.rolagem_texto {
+    display: flex;
+    color: white;
+    font-size: 1.5rem;
+    height: 40px;
+    background-image: linear-gradient(to bottom, #2160bd, #3a72bc);
+    
+    
+}
+
+.titulo {
+    display: inline;
+    font-size: 3rem;
+    font-size: 2rem;
+    
+}
+
+
+.logo {
+    margin-top: 5%;
+    width: 6rem;
+    position: initial;
+}
+
+
+
+#renderCanvas {  
+    border-radius: 20px;
+	width: 70%;
+	height: 70%;
+	touch-action:auto;
+    background: #ffffff;
+    box-shadow:  9px 9px 18px #dbdbdb,
+                 -9px -9px 18px #ffffff;
+}
+
+
+.titulo{
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.base{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+
+.informacoes {
+   display: flex; 
+   justify-content: center;
+   align-items: center;  
+   
+}
+
+
+#tabela_primaria {
+    width: 70%;
+    color:white;
+    background-color: #0f4699;
+    background-image: linear-gradient(to bottom, #043e94, #032e66);
+    border-radius: 10px;
+    border:none;
+    margin-top: 5%;
+    
+}
+
+.titulo_fontes {
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+
+.cards_linha {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.card {
+    display: flex;
+    height: 10rem;
+    width: 12rem;
+    margin:1%;
+
+}
+
+.imagem_card {
+    max-width: 12rem;
+    max-height: 6rem;
+}
+
+
+.card-body1 {
+    height: 8rem;
+
+}
+
+.card-title {
+    margin-top: 5%;
+    font-size: 1rem;
+    margin: 5%;
+
+}
+
+.card-text {
+    margin: 5%;
+}
+
+
+
+footer {
+    margin-top: 5%;
+    color:white;
+    background-image: linear-gradient(to bottom, #2160bd, #3a72bc);
+    
+}
+
+.footer_esquerda {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+
+}
+
+
+.link_site {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #2160bd, #3a72bc);
+    
+    margin-bottom: 5%;
+}
+
+
+
+    
