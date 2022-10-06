@@ -28,7 +28,7 @@ var createScene = function () {
     //posição Cuiabá
 
     const cuiaba = new BABYLON.MeshBuilder.CreateCapsule("cuiaba", {radius:0.5, height:10, radiusTop:4});
-    cuiaba.position.x = 30;
+    cuiaba.position.x = 15;
     cuiaba.position.y = 40;
     cuiaba.position.z = 120;
     cuiaba.material = textura_pontos;
@@ -37,11 +37,11 @@ var createScene = function () {
         advancedTexture.addControl(rect1_cuiaba);
         rect1_cuiaba.width = "50px";
         rect1_cuiaba.height ="17px";
-        rect1_cuiaba.thickness = 2;  
+        rect1_cuiaba.thickness = 1;  
         rect1_cuiaba.linkOffsetY = "-20px";
         rect1_cuiaba.transformCenterY = 1; 
-        rect1_cuiaba.background = "gray"; 
-        rect1_cuiaba.alpha = 1;
+        rect1_cuiaba.background = "MidnightBlue"; 
+        rect1_cuiaba.alpha = 0.7;
         rect1_cuiaba.scaleX = 0;
         rect1_cuiaba.scaleY = 0;
         rect1_cuiaba.cornerRadius = 5
@@ -83,7 +83,7 @@ var createScene = function () {
         actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOverTrigger, function(ev){
                 scene.beginAnimation(rect1_cuiaba, 0, 10, false);
                 }));
-                //if hover is over remove highlight of the mesh
+ 
         actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOutTrigger, function(ev){
                     scene.beginAnimation(rect1_cuiaba, 10, 0, false);
                 }));
@@ -91,8 +91,8 @@ var createScene = function () {
     //posição Cáceres
 
     const caceres = new BABYLON.MeshBuilder.CreateCapsule("caceres", {radius:0.5, height:10, radiusTop:4});
-    caceres.position.x = 15;
-    caceres.position.y = 40;
+    caceres.position.x = 20;
+    caceres.position.y = 35;
     caceres.position.z = 100;
     caceres.material = textura_pontos;
 
@@ -100,18 +100,18 @@ var createScene = function () {
         advancedTexture.addControl(rect1_caceres);
         rect1_caceres.width = "50px";
         rect1_caceres.height ="17px";
-        rect1_caceres.thickness = 2;  
+        rect1_caceres.thickness = 1;  
         rect1_caceres.linkOffsetY = "-20px";
         rect1_caceres.transformCenterY = 1; 
-        rect1_caceres.background = "gray"; 
-        rect1_caceres.alpha = 1;
+        rect1_caceres.background = "MidnightBlue"; 
+        rect1_caceres.alpha = 0.7;
         rect1_caceres.scaleX = 0;
         rect1_caceres.scaleY = 0;
         rect1_caceres.cornerRadius = 5
         rect1_caceres.linkWithMesh(caceres);    
   
     var text1 = new BABYLON.GUI.TextBlock();
-        text1.text = "caceres";
+        text1.text = "Cáceres";
         text1.color = "white";
         text1.fontSize = 18;
         text1.textWrapping = true;
@@ -155,19 +155,19 @@ var createScene = function () {
 
     const ladario = new BABYLON.MeshBuilder.CreateCapsule("ladario", {radius:0.5, height:10, radiusTop:4});
     ladario.position.x = 15;
-    ladario.position.y = 40;
-    ladario.position.z = 25;
+    ladario.position.y = 30;
+    ladario.position.z = 35;
     ladario.material = textura_pontos;
 
     var rect1_ladario = new BABYLON.GUI.Rectangle();
         advancedTexture.addControl(rect1_ladario);
         rect1_ladario.width = "50px";
         rect1_ladario.height ="17px";
-        rect1_ladario.thickness = 2;  
+        rect1_ladario.thickness = 1;  
         rect1_ladario.linkOffsetY = "-20px";
         rect1_ladario.transformCenterY = 1; 
-        rect1_ladario.background = "gray"; 
-        rect1_ladario.alpha = 1;
+        rect1_ladario.background = "MidnightBlue"; 
+        rect1_ladario.alpha = 0.7;
         rect1_ladario.scaleX = 0;
         rect1_ladario.scaleY = 0;
         rect1_ladario.cornerRadius = 5
@@ -218,19 +218,19 @@ var createScene = function () {
 
     const fcoimbra = new BABYLON.MeshBuilder.CreateCapsule("fcoimbra", {radius:0.5, height:10, radiusTop:4});
     fcoimbra.position.x = 8;
-    fcoimbra.position.y = 40;
-    fcoimbra.position.z = -2;
+    fcoimbra.position.y = 30;
+    fcoimbra.position.z = 10;
     fcoimbra.material = textura_pontos;
 
     var rect1_fcoimbra = new BABYLON.GUI.Rectangle();
         advancedTexture.addControl(rect1_fcoimbra);
         rect1_fcoimbra.width = "80px";
         rect1_fcoimbra.height ="17px";
-        rect1_fcoimbra.thickness = 2;  
+        rect1_fcoimbra.thickness = 1;  
         rect1_fcoimbra.linkOffsetY = "-20px";
         rect1_fcoimbra.transformCenterY = 1; 
-        rect1_fcoimbra.background = "gray"; 
-        rect1_fcoimbra.alpha = 1;
+        rect1_fcoimbra.background = "MidnightBlue"; 
+        rect1_fcoimbra.alpha = 0.7;
         rect1_fcoimbra.scaleX = 0;
         rect1_fcoimbra.scaleY = 0;
         rect1_fcoimbra.cornerRadius = 5
@@ -280,8 +280,8 @@ var createScene = function () {
     //posição Porto Murtinho
 
     const pmurtinho = new BABYLON.MeshBuilder.CreateCapsule("pmurtinho", {radius:0.5, height:10, radiusTop:4});
-    pmurtinho.position.x = 9;
-    pmurtinho.position.y = 40;
+    pmurtinho.position.x = 3;
+    pmurtinho.position.y = 35;
     pmurtinho.position.z = -30;
     pmurtinho.material = textura_pontos;
 
@@ -289,11 +289,11 @@ var createScene = function () {
         advancedTexture.addControl(rect1_pmurtinho);
         rect1_pmurtinho.width = "80px";
         rect1_pmurtinho.height ="17px";
-        rect1_pmurtinho.thickness = 2;  
+        rect1_pmurtinho.thickness = 1;  
         rect1_pmurtinho.linkOffsetY = "-20px";
         rect1_pmurtinho.transformCenterY = 1; 
-        rect1_pmurtinho.background = "gray"; 
-        rect1_pmurtinho.alpha = 1;
+        rect1_pmurtinho.background = 'MidnightBlue'; 
+        rect1_pmurtinho.alpha = 0.7;
         rect1_pmurtinho.scaleX = 0;
         rect1_pmurtinho.scaleY = 0;
         rect1_pmurtinho.cornerRadius = 5
@@ -340,7 +340,12 @@ var createScene = function () {
                     scene.beginAnimation(rect1_pmurtinho, 10, 0, false);
                 }));
 
-    
+
+
+
+
+
+
     return scene;
 
 };

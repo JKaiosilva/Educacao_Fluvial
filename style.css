@@ -156,20 +156,59 @@ footer {
 
 }
 
-
 .link_site {
     display: flex;
     justify-content: center;
-    text-align: center;
-    width: 100%;
-    background-image: linear-gradient(to bottom, #2160bd, #3a72bc);
-    
+    text-align: center;    
     margin-bottom: 5%;
 }
 
-.colete {
-    width: 500px;
-    height: 300px;
+.base1 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+#renderCanvas1 {
+    border-radius: 20px;
+	width: 60%;
+	height: 60%;
+	touch-action:auto;
+    background: #ffffff;
+    margin: 1%;
+
 }
 
     
+#renderCanvas2 {
+    border-radius: 20px;
+	width: 60%;
+	height: 60%;
+	touch-action:auto;
+    background: #ffffff;
+    margin: 1%;
+
+}
+.base2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tabela_embarcacao {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.titulo_educacional {
+    text-align: center;
+    margin:1%;
+}
+
+.texto_embarcacao_pesca {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(228, 228, 228);
+    font-size: 1.5rem;
+}
