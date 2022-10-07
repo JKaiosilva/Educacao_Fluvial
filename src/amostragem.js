@@ -3,11 +3,6 @@
 setInterval(carregar_info, 5000)
 
 
-
-
-
-
-
 function carregar_info(){
 fetch("./medidas_getsite.json")
 .then(response => {

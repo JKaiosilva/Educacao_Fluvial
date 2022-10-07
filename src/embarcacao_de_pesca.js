@@ -15,7 +15,7 @@ var createScene = function () {
     var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene2);
     light.intensity = 0.6;
 
-   const modelo3d = BABYLON.SceneLoader.ImportMesh("", "modelo3d/", "boat_pesca.obj", scene2, function (newMeshes) {
+   const modelo3d = BABYLON.SceneLoader.ImportMesh("", "/modelo3d/", "boat_pesca.obj", scene2, function (newMeshes) {
     camera.target = newMeshes[0];
     });
     

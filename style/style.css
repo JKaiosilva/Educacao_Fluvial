@@ -16,9 +16,15 @@ header {
 }
 
 .navbar{
-    color: #ffffff;
-    background-image: linear-gradient(to bottom, #0e4097, #1b53b4);
+    position: fixed;
+    top:0;
+    left:0;
+    background-image: linear-gradient(to bottom, #0e4097, #1b53b4); 
 
+}
+
+.nav-item{
+    color:white
 }
 
 
@@ -56,6 +62,10 @@ header {
     background: #ffffff;
     box-shadow:  9px 9px 18px #dbdbdb,
                  -9px -9px 18px #ffffff;
+}
+
+#renderCanvas:hover {
+    cursor:pointer;
 }
 
 
@@ -177,7 +187,13 @@ footer {
 	touch-action:auto;
     background: #ffffff;
     margin: 1%;
+    box-shadow:  9px 9px 18px #dbdbdb,
+                 -9px -9px 18px #ffffff;
 
+}
+
+#renderCanvas1:hover {
+    cursor:pointer;
 }
 
     
@@ -188,8 +204,17 @@ footer {
 	touch-action:auto;
     background: #ffffff;
     margin: 1%;
-
+    box-shadow:  9px 9px 18px #dbdbdb,
+    -9px -9px 18px #ffffff;
 }
+
+
+#renderCanvas2:hover {
+    cursor:pointer;
+}
+
+
+
 .base2 {
     display: flex;
     justify-content: center;
@@ -211,4 +236,24 @@ footer {
     margin-right: 10%;
     background-color: rgb(228, 228, 228);
     font-size: 1.5rem;
+}
+
+.caixa_init {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+
+}
+
+.botao_init {
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #043e94, #032e66);
+    border-radius: 10px;
+    width: 50vh;
+    height: 10vh;
 }

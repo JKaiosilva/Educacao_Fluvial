@@ -118,7 +118,7 @@ async function getnivel() {
 
     const enviar_dados = require("./medidas_getsite");
     enviar_dados.push(dados_cidades);
-    fs.writeFile('medidas_getsite.json', JSON.stringify(dados_cidades), erro => {
+    fs.writeFile('paginas/medidas_getsite.json', JSON.stringify(dados_cidades), erro => {
         if (erro) throw erro; 
         console.log("Dados transmitidos com sucesso!");
     });
