@@ -1,10 +1,11 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
-
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const url = 'https://www.marinha.mil.br/chn-6/';
+
+
 
 
 async function getnivel() {
